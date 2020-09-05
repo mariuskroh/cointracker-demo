@@ -1,13 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
-import Cointracker from "./components/Cointracker";
+import CryptoStatusWidget from "./components/CryptoStatusWidget";
 import "./App.css";
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <Cointracker />
+        <CryptoStatusWidget />
       </div>
     </Router>
   );
