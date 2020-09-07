@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { Switch, Route, Redirect } from "react-router-dom";
 import axios from "axios";
-import Loader from "./Loader";
-import Widget from "./Widget";
+import Routes from "./Routes";
 
-const Cointracker = () => {
+const CryptoStatusWidget = () => {
   const [appState, setAppState] = useState({
     loading: true,
     coins: null,
   });
+
   const { loading, coins } = appState;
 
   useEffect(() => {
@@ -28,23 +27,11 @@ const Cointracker = () => {
     getData();
   }, [setAppState]);
 
-  console.log(appState);
-
   return (
     <div>
-      <Switch>
-        {loading && <Route exact path="/" render={() => <Loader />} />}
-        {!loading && (
-          <Route
-            exact
-            path="/search"
-            render={() => <Widget currencies={coins} />}
-          />
-        )}
-      </Switch>
-      {!loading && <Redirect to="/search" />}
+      <Routes loading={loading} coins={coins} />
     </div>
   );
 };
 
-export default Cointracker;
+export default CryptoStatusWidget;
