@@ -1,7 +1,6 @@
 import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import Loader from "./Loader";
-import Widget from "./Widget";
 import SearchForm from "./SearchForm";
 import SingleCurrency from "./SingleCurrency";
 
@@ -9,10 +8,11 @@ const Routes = (props) => {
   const { loading, coins } = props;
   return (
     <Switch>
-      <Route exact path="/" render={() => <Loader loading={loading} />} />
+      {loading && <Route exact path="/" render={() => <Loader />} />}
       {!loading && (
         <>
           <Route
+            exact
             path="/coin/:id"
             render={(routeProps) => (
               <SingleCurrency {...routeProps} currencies={coins} />
@@ -23,6 +23,7 @@ const Routes = (props) => {
             path="/search"
             render={() => <SearchForm currencies={coins} />}
           />
+          <Route render={() => <Redirect to="/search" />} />
         </>
       )}
     </Switch>
