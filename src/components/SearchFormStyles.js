@@ -5,7 +5,6 @@ const styles = createUseStyles({
     height: 100,
     display: "flex",
     justifyContent: "center",
-    marginTop: 20,
   },
   searchForm: {
     height: "100%",

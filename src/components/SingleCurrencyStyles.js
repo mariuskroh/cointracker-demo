@@ -2,14 +2,15 @@ import { createUseStyles } from "react-jss";
 
 const styles = createUseStyles({
   container: {
-    height: "100vh",
+    margin: "5% 0",
+    height: "90%",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
   },
+
   root: { minWidth: 300 },
-  avatar: {},
 
   change1h: (currency) => ({
     color: currency.priceChange1h > 0 ? "green" : "red",
