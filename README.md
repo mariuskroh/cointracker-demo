@@ -4,4 +4,4 @@
 
 A simple widget displaying the status of various crypto currencies using the [coinstats API](https://apidocs.coinstats.app/) and Material UI.
 
-[View the working demo](https://cryptostatuswidget.netlify.app/search/)
+[View the working demo here.](https://cryptostatuswidget.netlify.app)
