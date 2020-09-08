@@ -23,8 +23,9 @@ const SingleCurrency = (props) => {
   if (currency === undefined) {
     return <Redirect to="/search" />;
   } else {
+    document.title = `${currency.symbol} ${currencyFormat(currency.price)}`;
+
     const classes = styles(currency);
-    console.log(currency);
     const {
       container,
       root,

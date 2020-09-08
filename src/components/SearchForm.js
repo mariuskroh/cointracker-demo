@@ -6,6 +6,8 @@ import Autocomplete from "@material-ui/lab/Autocomplete";
 import styles from "./SearchFormStyles";
 
 const SearchForm = ({ currencies }) => {
+  document.title = "Crypo Status Widget";
+
   const classes = styles();
   let history = useHistory();
 
