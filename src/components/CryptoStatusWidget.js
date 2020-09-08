@@ -11,7 +11,7 @@ const CryptoStatusWidget = () => {
   const { loading, coins } = appState;
 
   useEffect(() => {
-    const url = "https://api.coinstats.app/public/v1/coins?skip=0&limit=100";
+    const url = "https://api.coinstats.app/public/v1/coins?skip=0&limit=1000";
     const getData = async () => {
       try {
         const response = await axios.get(url);
@@ -20,8 +20,10 @@ const CryptoStatusWidget = () => {
           loading: false,
           coins: data.coins,
         });
+        setTimeout(getData, 1000);
       } catch (err) {
         console.error(err);
+        setTimeout(getData, 1000);
       }
     };
     getData();
