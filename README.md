@@ -5,8 +5,3 @@
 A simple widget displaying the status of various crypto currencies using the [coinstats API](https://apidocs.coinstats.app/) and Material UI.
 
 [View the working demo](https://cryptostatuswidget.netlify.app/search/)
-
-#### Possible Future Improvements
-
-- [ ] Set Interval to update API data in real time
-- [ ] Display current currency price in website title
