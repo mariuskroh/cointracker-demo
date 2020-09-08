@@ -2,6 +2,10 @@
 
 ## Crypo Status Widget
 
-A simple widget displaying the status of various crypto currencies using the [coinstats API](https://apidocs.coinstats.app/) and Material UI.
+A simple widget displaying the status of various crypto currencies using the [Coinstats API](https://apidocs.coinstats.app/) and Material UI.
 
-[View the working demo here.](https://cryptostatuswidget.netlify.app)
+#### Features
+
+- Search from the top 1000 crypto currencies by market cap.
+- Displays all the important numbers and recent price changes.
+- Selected currency price gets also shown in website title so you can let it run in the background.
